@@ -28,7 +28,7 @@
 <body>
   <div class="container">
     <button id="whyBtn" aria-pressed="false">Click if Gay.</button>
-    <img id="reveal" src="image1.jpg" alt="Revealed image" />
+    <img id="reveal" src="image.1.jpg" alt="Revealed image" />
   </div>
 
   <script>
@@ -36,16 +36,18 @@
     const img = document.getElementById('reveal');
 
     btn.addEventListener('click', () => {
-      // Show image and change background to pink. Clicking again will toggle back.
       const isVisible = img.style.display === 'block';
+
       if (!isVisible) {
         img.style.display = 'block';
         document.body.style.background = 'pink';
         btn.setAttribute('aria-pressed', 'true');
+        btn.textContent = 'Why are you Gae?'; // change button text
       } else {
         img.style.display = 'none';
         document.body.style.background = 'white';
         btn.setAttribute('aria-pressed', 'false');
+        btn.textContent = 'Click if Gay.'; // change back
       }
     });
   </script>
