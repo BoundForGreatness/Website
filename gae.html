@@ -1,160 +1,53 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.1">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Why are you here?</title>
+  <style>
+    html, body { height: 100%; margin: 0; background: white; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    .container { height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 20px; }
+    button {
+      padding: 14px 22px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.12);
+      background: #fff;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    img#reveal {
+      max-width: 90%;
+      max-height: 60vh;
+      display: none;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!doctype html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Click Demo&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--white: #ffffff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--pink: #ffaddb;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>--max-width: 900px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>html,body{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height:100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin:0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--white);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color:#111;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>-webkit-font-smoothing:antialiased;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>-moz-osx-font-smoothing:grayscale;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.wrap {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>min-height:100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content:center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding:32px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-sizing:border-box;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align:center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width:var(--max-width);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width:100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>button#revealBtn{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background:#111;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color:#fff;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border:0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding:18px 28px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size:18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius:12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>cursor:pointer;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 8px 20px rgba(17,17,17,0.12);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>button#revealBtn:active { transform: translateY(1px) scale(.998); }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>button#revealBtn[disabled] { opacity:.7; cursor:not-allowed; }</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Hidden state for the image container */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.image-wrap{</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top:28px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>align-items:center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content:center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>pointer-events:none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>-webkit-user-select:none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>user-select:none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>img#meme {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width:100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-height:60vh;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius:10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: scale(.96);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>opacity:0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: transform .35s cubic-bezier(.2,.9,.25,1), opacity .35s ease;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 12px 30px rgba(0,0,0,0.08);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display:block;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Visible state applied after click */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.revealed body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: var(--pink);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: background .35s ease;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.revealed img#meme {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>opacity:1;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transform: scale(1);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* small responsive tweaks */</p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width:520px){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>button#revealBtn { width:100%; padding:14px 18px; font-size:16px; }</p>
-<p class="p1"><span class="Apple-converted-space">      </span>img#meme { max-height:50vh; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>/* Centering helper when body changes (works with JS adding .revealed to &lt;html&gt;) */</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card" role="main" aria-live="polite"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button id="revealBtn" aria-controls="meme" aria-expanded="false"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Click if you're gay.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/button&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="image-wrap" aria-hidden="true"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Put your uploaded image filename here (same folder as index.html) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img id="meme" src="hs3r7lXKsx9fxj0XqnoxZxaBrsd.webp" alt="meme image" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>(function(){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const btn = document.getElementById('revealBtn');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const img = document.getElementById('meme');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>let revealed = false;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>btn.addEventListener('click', function(){</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Prevent double clicks</p>
-<p class="p1"><span class="Apple-converted-space">        </span>if (revealed) return;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>revealed = true;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>btn.setAttribute('aria-expanded', 'true');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// add a class to the &lt;html&gt; element so CSS can change the background</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.documentElement.classList.add('revealed');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// show the image by toggling its opacity via CSS (already prepared)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// ensure the image's parent is no longer aria-hidden for accessibility</p>
-<p class="p1"><span class="Apple-converted-space">        </span>img.parentElement.setAttribute('aria-hidden', 'false');</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// optional: scroll image into view on small screens</p>
-<p class="p1"><span class="Apple-converted-space">        </span>setTimeout(() =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">          </span>img.scrollIntoView({behavior:'smooth', block:'center'});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}, 120);</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// disable the button to indicate it's been used</p>
-<p class="p1"><span class="Apple-converted-space">        </span>btn.disabled = true;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>// graceful handling if image fails to load</p>
-<p class="p1"><span class="Apple-converted-space">      </span>img.addEventListener('error', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>img.alt = 'Image failed to load. Make sure the file name is correct and the image is in the same folder.';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>img.style.display = 'none';</p>
-<p class="p1"><span class="Apple-converted-space">      </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>})();</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <div class="container">
+    <button id="whyBtn" aria-pressed="false">Click if Gay.</button>
+    <img id="reveal" src="image.1.jpg" alt="Revealed image" />
+  </div>
+
+  <script>
+    const btn = document.getElementById('whyBtn');
+    const img = document.getElementById('reveal');
+
+    btn.addEventListener('click', () => {
+      // Show image and change background to pink. Clicking again will toggle back.
+      const isVisible = img.style.display === 'block';
+      if (!isVisible) {
+        img.style.display = 'block';
+        document.body.style.background = 'pink';
+        btn.setAttribute('aria-pressed', 'true');
+      } else {
+        img.style.display = 'none';
+        document.body.style.background = 'white';
+        btn.setAttribute('aria-pressed', 'false');
+      }
+    });
+  </script>
 </body>
 </html>
